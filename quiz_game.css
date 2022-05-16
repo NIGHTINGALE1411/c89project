@@ -15,19 +15,15 @@ body
 	}
 
 
-#player1_name , #player2_name
+#player1name , #player2name
 {
 	display:inline-block;
 	margin-left: 20px;
 	
 }
-#word
+#no1, #no2
 {
 	width: 60%;
-}
-#word_display
-{
-	letter-spacing: 5px;
 }
 #output
 {
