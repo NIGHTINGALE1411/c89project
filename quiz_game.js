@@ -22,3 +22,40 @@ function Send(){
     document.getElementById("no1").value=""
     document.getElementById("no2").value=""
 }
+questionturn="player1"
+answerturn="player2"
+ function check(){
+     getanswer=document.getElementById("inputcheckbox").value
+     answer=getanswer.toLowerCase()
+     console.log(answer)
+     if (answer==actualanswer){
+         if (answerturn=="player1")
+         {
+             player1score=player1score+1
+             document.getElementById("player1score").innerHTML=player1score
+         }
+         if (answerturn=="player2")
+         {
+             player2score=player2score+1
+             document.getElementById("player2score").innerHTML=player2score
+         }}
+         if (questionturn=="player1"){
+          questionturn="player2"
+          document.getElementById("playerquestion").innerHTML="question turn-"+player2name
+      
+      }
+      else{
+          questionturn="player1"
+          document.getElementById("playerquestion").innerHTML="question turn-"+player1name
+      }
+      if (answerturn=="player1"){
+          answerturn="player2"
+          document.getElementById("playeranswer").innerHTML="answer turn-"+player2name
+      
+      }
+      else{
+          answerturn="player1"
+          document.getElementById("playeranswer").innerHTML="answer turn-"+player1name
+      }
+      document.getElementById("output").innerHTML=""
+ }
